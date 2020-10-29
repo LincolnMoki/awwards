@@ -55,3 +55,42 @@ class TestProject(TestCase):
 
     def tearDown(self) -> None:
         Project.objects.all().delete()
+
+class TestProfile(TestCase):
+    def setUp(self) -> None:
+        self.new_profile = Profile(
+            id=1,
+            profile_picture='media/profile.jpg',
+            prof_user=new_user,
+            bio='this is a test default bio',
+            contact_info='testcontact@mail.com',
+            profile_Id=1,
+            all_projects=test_project,
+        )
+
+    def testInstance(self):
+        self.assertTrue(isinstance(self.new_profile, Profile))
+
+    def testSaveProfile(self):
+        before = Profile.objects.all()
+        self.new_profile.save()
+        after = Profile.objects.all()
+
+        self.assertLess(before, after)
+
+    def testEditProfile(self):
+        before = Profile.objects.all()
+        self.new_profile.save()
+        after = Profile.objects.all()
+
+        self.assertTrue(before != after)
+
+    def testDeleteProfile(self):
+        before = Profile.objects.all()
+        self.new_profile.save()
+        after = Profile.objects.all()
+
+        self.assertGreater(before, after)
+
+    def tearDown(self) -> None:
+        Profile.objects.all().delete()
