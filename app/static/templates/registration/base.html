@@ -46,7 +46,7 @@
     {% endblock %}
 </head>
 <body>
-    
+
 {% include 'main/navbar.html'%}
 
 {% block content %}
@@ -54,4 +54,23 @@
 {% endblock %}
     
 </body>
+{% block scripts %}
+<script src="{% static '/js/index.js'%}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://assets.awwwards.com/dist/js/vendor.13df77655f5689a9b532.js" defer></script>
+<script src="https://assets.awwwards.com/dist/js/home.2734a967c43d3d4952c9.js" defer></script>
+
+<script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+</script>
+
+
+
+
+{% bootstrap_javascript %}
+{% endblock %}
 </html>
