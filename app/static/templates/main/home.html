@@ -1,235 +1,34 @@
 {% extends 'base.html'%}
-{% block content %}
-{% load static%}
-<body class="home" data-debug="0">
-    <div class="wrapper ">
-        <section id="content">
-            <div class="content-view">
-                <div class="box-site-head js-single-element"
-                     data-model="{&quot;likes&quot;:55,&quot;id&quot;:38186,&quot;images&quot;:{&quot;thumbnail&quot;:&quot;submissions\/2019\/10\/5da42f4e8967d075754281.jpg&quot;},&quot;slug&quot;:&quot;laguta-laguta&quot;,&quot;title&quot;:&quot;Laguta &amp; Laguta&quot;,&quot;createdAt&quot;:1571616000,&quot;tags&quot;:[&quot;Design Agencies&quot;,&quot;Mobile &amp; Apps&quot;,&quot;Web &amp; Interactive&quot;,&quot;Flat Design&quot;,&quot;Minimal&quot;,&quot;Portfolio&quot;,&quot;Responsive Design&quot;,&quot;Black&quot;,&quot;Red&quot;,&quot;White&quot;,&quot;Gallery&quot;,&quot;GSAP Animation&quot;,&quot;UI design&quot;,&quot;Nuxt.js&quot;],&quot;type&quot;:&quot;submission&quot;}">
-                    <div class="box-bg has-tablet" style="height:500px;">
-                        <a href="/">
-    
-                            <img src="https://cdn.pixabay.com/photo/2017/07/21/23/57/concert-2527495_960_720.jpg"
-                                 data-src="https://cdn.pixabay.com/photo/2017/07/21/23/57/concert-2527495_960_720.jpg"
-                                 alt="Laguta &amp; Laguta" width="1900" height="200" class="lazy"/>
-                        </a>
-                    </div>
-                    <div class="box-photo has-mobile">
-                        <a href="/">
-                            <img src="https://cdn.pixabay.com/photo/2017/07/21/23/57/concert-2527495_960_720.jpg"
-                                 data-srcset="https://cdn.pixabay.com/photo/2017/07/21/23/57/concert-2527495_960_720.jpg"
-                                 alt="Laguta &amp; Laguta" class="lazy"/>
-                                
-                            
-                        </a>
-                    </div>
-                    <div class="box-content">
-                        <a href="/" class="site-link" aria-label="Laguta &amp; Laguta"></a>
-                        <div class="inner vertical-center">
-                            <div class="box-info">
-                                <div class="row">
-                                    <h2 class="heading-large"><a href="{{image.url}}">Ocean Tides</a></h2>
-                                </div>
-                                <div class="row">
-                                    <div class="by">
-                                        by <strong>
-    
-                                        <a href="https://github.com/RonnyLincoln">Ronny</a>
-                                    </strong> from <strong>Kenya</strong> with <strong>7.58</strong>
-                                    </div>
-                                </div>
-                                <div class="box-notesite js-notes">
-                                    <li class="circle-note-progress style-design" data-note="">
-                                        <div class="circle">
-                                            <div class="des">
-                                                <p class="d-block mx-auto textrate">7.78</p>
-                                            </div>
-                                        </div>
-                                        <div class="legend">DESIGN</div>
-                                    </li>
-                                    <li class="circle-note-progress style-usability"
-                                        data-note="{{rating.usability_average}}">
-                                        <div class="circle">
-                                            <div class="des1">
-                                                <p class="d-block mx-auto textrate">7.00</p>
-                                            </div>
-                                        </div>
-                                        <div class="legend">USABILITY</div>
-                                    </li>
-                                    <li class="circle-note-progress style-creativity"
-                                        data-note="{{rating.content_average}}">
-                                        <div class="circle">
-                                            <div class="des2">
-                                                <p class="d-block mx-auto textrate">7.41</p>
-                                            </div>
-                                        </div>
-                                        <div class="legend">CREATIVITY</div>
-                                    </li>
-                                     <li class="circle-note-progress style-creativity"
-                                        data-note="{{rating.content_average}}">
-                                        <div class="circle">
-                                            <div class="des2">
-                                                <p class="d-block mx-auto textrate">8.10</p>
-                                            </div>
-                                        </div>
-                                        <div class="legend">CONTENT</div>
-                                    </li>
-                                    <li class="circle-note-progress style-content" data-note="5.65">
-                                        <div class="circle">
-                                            <div class="des3">
-                                                <p class="d-block mx-auto textrate">7.10</p>
-                                            </div>
-                                        </div>
-                                        <div class="legend">MOBILE</div>
-                                    </li>
-                                </ul>
+ {% block content %}
+ <section class="main-banner" id="home">
 
-                            </div>
-                        </div>
-                        <div class="box-breadcrumb">
-                            <div class="box-left">
-                                <strong class="parent">
-                                    <a href="/">Site of the Day</a>
-                                </strong>
-                                <span class="text-x-thin">October 27, 2020</span>
-                            </div>
-                            <div class="box-right">
-                                <div class="list-share-circles style2 light">
-                                </div>
+    <div class="container">
 
-                            </div>
-                        </div>
-                        <div class="box-bl">
-                            <a href="/" data-identifier="laguta-laguta" data-type="submission"
-                               class="js-visit-item bt-default green-fill" target="_blank" rel="noopener nofollow">Visit
-                                Site</a>
+        <div class="baner-info-w3ls text-left">
+            <h1 id="heading"><a href="/">Awwards</a></h1>
+            <h6 class="mx-auto mt-4" id="heading-small">A
+                collection of my favourite projects </h6> <a class="btn btn-primary mt-lg-5 mt-3 agile-link-bnr scroll"
+                                                             href="#about" role="button">Explore</a>
 
-                            <strong class="bt-item bt-default js-collect">Collect</strong>
+            <div class="banner-high-lights text-left">
 
-                        </div>
-                        <div class="box-br">
+                <div class="rotate">
+                    <a href="#about" class="scroll">
 
-                            <div class="box-users-likes">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="block p-0" id="block-sod">
-            </div>
-
-            <div class="block p-0">
-                <div class="inner">
-                    <div class="box-heading">
-                        <div class="box-left">
-                            <h2 class="title">
-                                <a href="/" class="text-black text-center" >
-                                    Nominees
-                                </a>
-                            </h2>
-                            <span>VOTE FOR YOUR FAVORITAAA!!!</span>
-                        </div>
-                    </div>
-                    <div class="grid js-grid" id="items-row">
-                        <ul class="list-items list-flex list-one-row js-elements-container">
-                            {% for image in all_images%}
-                            <li class="col-3 js-collectable">
-                                <div class="box-item">
-                                    <figure class="rollover ">
-                                        <a href="/">
-                                            <div class="box-photo">
-                                                {% if image.image %}
-                                                <img src="{{image.image.url}}" alt="Our Place" width="417" height="298"class="lazy"/>
-                                                {% endif %}
-                                            
-                                            </div>
-                                        </a>
-
-                                        <div class="hover-item top">
-                                            <span class="js-options-collectable"></span>
-
-                                            <span class="bt-item bt-default bt-likeit js-bt-like js-collect-like ">
-                    <svg class="ico-svg" viewbox="0 0 15 14">
-        <use xlink:href="https://www.awwwards.com/assets/images/sprite-icons.svg#heart"></use>
-    </svg>
-           {% for rating in ratings%} <span class="number"> {{rating.design}}</span>
-
-                    {%endfor%}
-
-                                           </span></div>
-                                           <div class="hover-item bottom">
-                                            <a class="js-visit-item bt-item bt-link" href="{{image.link}}"
-                                               data-identifier="our-place" data-type="submission" target="_blank"
-                                               rel="noopener nofollow">
-                                                <svg class="ico-svg" viewbox="0 0 22.24 14">
-                                                    <use xlink:href="https://www.awwwards.com/assets/images/sprite-icons.svg#link"></use>
-                                                </svg>
-                                            </a>
-                                        </div>
-
-                                        <div class="hover-item center">
-                                            <a href="{% url 'project' image.title %}"></a>
-                                                </a>
-                                        </div>
-                                    </figure>
-
-                                    <div class="box-info">
-                                        <div class="content">
-                                            <div class="row">
-                                                <h3><a href="/">{{image.title}}</a></h3>
-                                            </div>
-                                            <div class="row row-2col">
-                                                <div class="box-left">From Kenya</div>
-
-                                                <div class="box-right">
-                                                    October 30, 2019
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="footer style2">
-                                            <div class="box-left">
-                                                <div class="box-byuser js-tooltip-user">
-                                                    <div class="item js-user" data-username="thecouch">
-                                                        <a href="">
-                                                            {% if profile.profile_picture %}
-                                                            <img src="{{profile.profile_picture.url}}"
-                                                                 width="27"
-                                                                 height="27" alt="{{image.title}}" class="lazy"/>
-                                                        
-                                                        {% else %}
-                                                        image{{image.user.prof_user.profile_picture.url}}
-                                                        <img src=""
-                                                                 width="27"
-                                                                 height="27" alt="{{image.title}}" class="lazy"/>
-                                                        {% endif %}
-                                                    </a>
-                                                    </div>
-                                                    <div class="by">
-                                                        by <strong><a href="{% url 'profile' image.user.username%}"
-                                                                      class="text-black">{{image.user.username}}</a></strong>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="box-right">
-                                                <ul class="list-tags size-small">
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
+                        <span class="fa fa-long-arrow-down">
+</span> </a>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+
+
+
+
+
 
 
 </section>
-</div>
-</body>
-{% endblock%}
+{% endblock %}
