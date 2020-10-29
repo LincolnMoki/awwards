@@ -71,3 +71,17 @@ def edit_profile(request, username):
         'prof_form': pform,
     }
     return render(request, 'main/edit.html', params)
+
+def upload(request):
+    if request.method == "POST":
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.user = request.user
+            post.save()
+            return redirect('home')
+    else:
+        form = PostForm()
+
+
+    return render(request, 'main/upload.html', {'form': form})
