@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container" style="margin-top:6%">
+    <h5 class="mb-4 mt-4">{{ all_projects.title }} by {{ all_projects.user.username }} from {{ all_projects.user }} <span
+            id="heart"> <i class="fas fa-heart"></i></span></h5>
+
+    <div class="card">
+        <div class="view overlay" style="background-image:url({{post.image.url}})">
+            <img class="card-img-top" style="visibility:hidden" width="100%"
+                 src="{{ post.image.url }}-/crop/1440x720/center/-/quality/lightest/" alt="{{image.title}}">
+            <a href="">
+                <div class="mask rgba-black-slight">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6 d-flex flex-row mx-auto" style="margin-top:20%">
+                                {% for rating in post.ratings.all %}
+                                {% if forloop.counter is post.ratings.all.count %}
+                                <h3 id="design">{{ rating.design_average}}<br>
+                                    <span class="rates">design</span>
+                                </h3>
+                                <h3 id="usable" class="mx-auto">{{ rating.usability_average }}<br>
+                                    <span class="rates">usability</span>
+                                </h3>
+                                <h3 id="content">{{ rating.content_average }}<br>
+                                    <span class="rates">content</span>
+                                </h3>
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                            <div class="col-md-3"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+        </div>
+
+{% endblock %}
