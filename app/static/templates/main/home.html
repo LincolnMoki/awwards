@@ -188,6 +188,45 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="footer style2">
+                                            <div class="box-left">
+                                                <div class="box-byuser js-tooltip-user">
+                                                    <div class="item js-user" data-username="thecouch">
+                                                        <a href="">
+                                                            {% if profile.profile_picture %}
+                                                            <img src="{{profile.profile_picture.url}}"
+                                                                 width="27"
+                                                                 height="27" alt="{{image.title}}" class="lazy"/>
+                                                        
+                                                        {% else %}
+                                                        image{{image.user.prof_user.profile_picture.url}}
+                                                        <img src=""
+                                                                 width="27"
+                                                                 height="27" alt="{{image.title}}" class="lazy"/>
+                                                        {% endif %}
+                                                    </a>
+                                                    </div>
+                                                    <div class="by">
+                                                        by <strong><a href="{% url 'profile' image.user.username%}"
+                                                                      class="text-black">{{image.user.username}}</a></strong>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="box-right">
+                                                <ul class="list-tags size-small">
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 </section>
