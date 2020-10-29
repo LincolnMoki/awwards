@@ -159,6 +159,35 @@
                     {%endfor%}
 
                                            </span></div>
+                                           <div class="hover-item bottom">
+                                            <a class="js-visit-item bt-item bt-link" href="{{image.link}}"
+                                               data-identifier="our-place" data-type="submission" target="_blank"
+                                               rel="noopener nofollow">
+                                                <svg class="ico-svg" viewbox="0 0 22.24 14">
+                                                    <use xlink:href="https://www.awwwards.com/assets/images/sprite-icons.svg#link"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+
+                                        <div class="hover-item center">
+                                            <a href="{% url 'project' image.title %}"></a>
+                                                </a>
+                                        </div>
+                                    </figure>
+
+                                    <div class="box-info">
+                                        <div class="content">
+                                            <div class="row">
+                                                <h3><a href="/">{{image.title}}</a></h3>
+                                            </div>
+                                            <div class="row row-2col">
+                                                <div class="box-left">From Kenya</div>
+
+                                                <div class="box-right">
+                                                    October 30, 2019
+                                                </div>
+                                            </div>
+                                        </div>
 
 
 </section>
