@@ -47,7 +47,7 @@ class Project(models.Model):
 
     def __str__(self):
         return self.title
-        
+
     @classmethod
     def fetch_all_images(cls):
         all_images = Project.objects.all()
@@ -66,3 +66,20 @@ class Project(models.Model):
     class Meta:
         db_table = 'projects'
         ordering = ['-id']
+
+class Comment(models.Model):
+    comment = models.CharField(max_length=80, null=True)
+    user = models.ForeignKey(User, null=True, on_delete=models.PROTECT)
+
+    def __str__(self):
+        return self.comment
+
+    def save_comment(self):
+        self.save()
+
+    def delete_comment(self):
+        self.delete()
+
+    class Meta:
+        db_table = 'comments'
+        ordering = ["-id"]
