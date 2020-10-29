@@ -41,3 +41,13 @@ def signup(request):
             'form': form,
         }
     return render(request, 'registration/signup.html', {'form': form})
+
+@login_required(login_url='login')
+def profile(request, username):
+    profile = Profile.objects.get(prof_user__username=request.user.username)
+    print("profile", profile)
+   
+    profile_data = {
+        'profile': profile
+    }
+    return render(request, 'profile/profile.html', profile_data)
