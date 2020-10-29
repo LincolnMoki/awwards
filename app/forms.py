@@ -23,3 +23,8 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = Project
         fields = ('title', 'details', 'link', 'image')
+
+class UpdateUserForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ('username', 'email')
