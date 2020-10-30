@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 
 import os
-import django_heroku
+
 import cloudinary
 from decouple import config,Csv
 from dotenv import load_dotenv
