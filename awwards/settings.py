@@ -144,3 +144,6 @@ cloudinary.config(
   api_key =  os.environ.get('CLOUDINARY_API_KEY'),  
   api_secret =  os.environ.get('CLOUDINARY_API_SECRET'), 
 )
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'login'
