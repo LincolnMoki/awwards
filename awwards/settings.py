@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 
 import os
+import django_heroku
 import cloudinary
 from decouple import config,Csv
 from dotenv import load_dotenv
@@ -148,3 +149,5 @@ cloudinary.config(
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'login'
+
+django_heroku.settings(locals())
